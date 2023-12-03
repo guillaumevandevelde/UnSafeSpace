@@ -1,0 +1,59 @@
+﻿@page "/"
+@inject NavigationManager _navManager
+
+<PageTitle>Unsafe Space</PageTitle>
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h1" Align="Align.Center" GutterBottom="true">Unsafe Space</MudText>
+    <MudText Align="Align.Center" Typo="Typo.h5"> Welcome to "Unsafe Space," where we boldly go where no one should ever go – exploring the galactic mishaps of terrible security practices! Strap in and prepare for a cosmic journey through the black holes of cybersecurity slip-ups and asteroid-sized blunders. Here, we orbit around the comical side of space-themed security fails, proving that even the vastness of the universe can't hide the dangers of poor digital defense strategies. Get ready to launch into a universe of hilariously unsafe practices that are truly out of this world!  </MudText>
+    <MudGrid Class="mt-8">
+        <MudItem xs="12" sm="6" md="4" Style="display:flex">
+            <MudCard Elevation="10" Class="rounded-lg pb-4" >
+                <MudCardMedia Image="images/sqlInject.jpg" Height="400" />
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h4" Align="Align.Center">Validate input, Sanitize Data!</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText Typo="Typo.body1" Align="Align.Center">All your database are belong to us!</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center">Show us your injection skills, we left all doors open!</MudText>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.Uncategorized.Radioactive" Color="Color.Secondary" Size="Size.Large" Style="width:50%;" OnClick="@(() => _navManager.NavigateTo("SQLInject"))">Inject Some Data</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4" Style="display:flex">
+            <MudCard Elevation="10" Class="rounded-lg pb-4">
+                <MudCardMedia Image="images/Script.jpg" Height="400" />
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h4" Align="Align.Center">Script! Don't follow the Script!</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudText Typo="Typo.body1" Align="Align.Center">Description: </MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center">Enscription - Some scription</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center">Enough prescription, break free, script thee!</MudText>
+                </MudCardContent>
+                <MudCardActions Class="d-flex justify-center">
+                    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Custom.Uncategorized.Radioactive" Color="Color.Secondary" Size="Size.Large" Style="width:50%;" OnClick="@(() => _navManager.NavigateTo("SQLInject"))">Write your own script!</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs="12" sm="6" md="4" Style="display:flex">
+            <MudCard Elevation="10" Class="rounded-lg pb-4">
+                <MudCardMedia Image="images/OpenVulnerability.jpg" Height="400" />
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h4" Align="Align.Center">Open for Vulnerabilities!</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent >
+                    <MudText Typo="Typo.body1" Align="Align.Center">Place holder, for new vulnerability!</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center">New vulnerability, we know you're out there...</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>

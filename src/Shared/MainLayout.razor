@@ -1,0 +1,59 @@
+﻿@inherits LayoutComponentBase
+
+
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+    <MudMainContent >
+        <MudDivider Class="main">
+                
+        </MudDivider>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    private bool _isDarkMode = true;
+
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private MudTheme _theme = new()
+        {
+
+            Typography = new Typography()
+            {
+              Default =   new Default
+              {
+                  FontFamily = new[] { "Nova Square", "sans - serif" }
+              }
+            },
+            
+            Palette = new PaletteLight()
+            {
+                Primary = Colors.Grey.Lighten3,
+                Secondary = Colors.Orange.Darken4,
+                AppbarBackground = Colors.Orange.Accent4,
+        
+            },
+            PaletteDark = new PaletteDark()
+            {
+                Primary = Colors.Grey.Darken4,
+                Secondary = Colors.Orange.Accent4,
+                AppbarBackground = Colors.Orange.Accent4,
+            },
+
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        };
+     
+}

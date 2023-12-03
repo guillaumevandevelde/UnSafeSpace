@@ -1,0 +1,36 @@
+﻿body {
+    background-color: #333333; /* Night grey background color */
+}
+
+/* Creating pixelated stars using CSS gradients */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+    .stars::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background: #fff; /* Color of the stars (white) */
+        box-shadow: 1000px 0 #fff; /* Spread of stars */
+    }
+
+    .stars::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background: #fff; /* Color of the stars (white) */
+        box-shadow: 2000px 0 #fff; /* Spread of stars */
+    }
