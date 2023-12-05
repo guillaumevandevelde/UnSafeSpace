@@ -6,3 +6,8 @@
 /src/.vs
 /src/bin/Debug/net6.0
 /src/obj
+/UnSafeSpace.Data/bin/Debug/net8.0
+/UnSafeSpace.Data/obj
+/UnSafeSpace.Domain/bin/Debug/net8.0
+/UnSafeSpace.Domain/obj
+/UnSafeSpace.Web/obj
